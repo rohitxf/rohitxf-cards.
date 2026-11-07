@@ -165,7 +165,9 @@ background:radial-gradient(circle,rgba(255,255,255,.95),rgba(255,213,74,.7) 25%,
 <div class="sheet" id="sheet"></div>
 </div>
 <script>
-const QR_IMG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAAFM0lEQVR42u2bQa7bNhCGPz4StXfDZXZ+6AlyglI3yBGagxR9dtFzFLlCbkABPUCO4Ad00U0ACt3YwajTBaXnAJHzFCBpG+ZpZQhjmhpx/vnnn7EzVl79DauvJ9Mn06/MtHfOuUigH51zzoXBhaFzzgX6h5ttO8vMlF5J3jIA6Rx7lXyOnF2HmFlu2wOjc5Dqq0fyGNkUNvd3m4IvQO9iw1EQLh/FxoCGO//2xbgztysulvA2tY4DFw+MsQR5HeAcgN6GzoZOyeM3AJreDHpfeh3uVA6I6XAHjBEXgWSlcQ845wKcI8ihkh/kMO4OyEHpGZxzXbsewKYr+wJiSlIxBV+wkhB7MGjaAxmSSlbJ3i402ZekoCQrqWkPZAUrCZKZWcFKUjFvZmb1PDTtgQkJxwhyGGPvdhbAl14HBz2DQ6xpPoCZAVZQEmL+/fdekrdc7zQfBUoyy1aSkryZL8kKKllBJUPDURCAIK99iU7KGCsXisbBkYIQSEGw4UXbUeBLAuqZN8tmGakZIdUPzUeBN/MTH6gRAWKQkGxmOps1fAZUjFoav5f7rOAtq5gVfGnbAxXoTCVXGITERIQmXuT/x3wg57WmO374GA5IVqhZwJvZseYCq4+v13JBAJ6t28Cz0cXv1pm+/JXhsP9oJT9fdzfwar9q1XfAn9dYcUlWMMsqWcWOgFNfLmzhKhK+AuyXVRvY15JrhWktx9/sV5hWjDp1K0xP9Qu3V3Fg4kLZ/joC4CoCINkKLHsgVFNb8VjbzGY/++GRve559hLIj5sa3MbFNZai4LgF7q/kgjzRv4IpiAIyn3+VfAUHdPLsadUG3t2sC+4TmHt4v4/iwH6/atUC5A7+Xoyt0QGoS2OsmtjxclbkEOi85KVVj0CJS4dgca+n7Xok3BzXmGZ2diIuHK0r+LqF7ZKpSjbLQTKSLwabDFMeHK9VRuULAPyeYe9suxAGXyzDJH/fjRG7/xBQ+jFSqfLCqtv/OhuePteqPZJ9we0OOrznhHOH1EqZf1UnfDjR3TocuFrufMgc7CMbcK5TCJIvfj31DB1D51x3RR/oKhSsDMOy3lmnlaa3E166smbVCneLq4bhzhc2Begvzjum8+6AGJLr2fhg1Xj15264EjHhE47L4zgwr7ZdiYRX08YY+3GXGTqF8fs5Ccz0RWuRuLCqA/gNblckoz3wBwu89MNsOJ3+nx43nfiNW5OO6+u6KcuMqMojllVM5TSlI8m+8CAaL3LC+g62xxUbqHfiCpqD2wP8uIY8vekAfl4VW88Br1fqAstI9uVSHiJFxWYPJK6xYg88f7MuuAs+r8QByboaX9NnUckkz9pI9cakGCOG1Nq59eq4wh1pqgXAW661UnVL8x6wkswmkcRbVslIriKJSpWPWu+YSJ41okklgOTNbFYGlNS6SpZ9SfWpp0qwJBVDMpIRq4VDyx4AlalzWgGwds38lB+N1j1gZt5MZ288dBJtjgsaV8vNm9W+uS+pto91okOJWTxs2wN1SqSyAiRXgXTWxyo9aLt33CN5jMkXxpiswODGSBUNfIHBfZWP9Yk48JDymGZIkjIdg5kw5PZnSiVXlQB66IPk2jib56manynFl17FAn2YGqZ9Fcd8qQ30lucJx4DC2aXfFa99NzgEwN9HDQA6dLn9Iey0Kb3COeItQ6+zNuLN6pRd4zMkYnVUoOqiVpIvl5ZZ8/MDtXFmZaoL6vPWoqDqBk1P0VxmSscIQxdgc9+N7s4KCueYAmm5X9CIB9zT/4yeTL95038AwdXJyodK6b0AAAAASUVORK5CYII=";
+window.addEventListener("error",function(e){var g=document.getElementById("grid");if(g&&!g.children.length)g.innerHTML='<p style="color:#ff9a9a;padding:16px;font-size:14px">Script error: '+e.message+'</p>';});
+</script>
+<script>
 const NAMES = ["Bronze","Copper","Silver","Steel","Gold","Amber","Platinum","Pearl","Jade","Ruby","Garnet","Sapphire","Topaz","Emerald","Opal","Diamond","Onyx","Obsidian","Cosmic","Black"];
 const DIA   = [25,60,75,90,115,140,165,195,225,255,285,320,350,385,420,455,490,525,560,600];
 const TIERS = ["STARTER","BASIC","STANDARD","ADVANCED","ELITE","MASTER","TOP TIER"];
@@ -230,4 +232,38 @@ $("sheet").innerHTML = `
 <button class="close" id="x" aria-label="Close">&times;</button>
 <h3 class="display" id="mt">Pay for Free Fire ${c.name}</h3>
 <div class="sub">Scan the QR and pay exactly this amount</div>
-<div 
+<div class="amt display">${inr(c.price)}</div>
+<div class="getline">You get ${c.dia} Diamonds</div>
+<div class="qrbox"><img src="${window.QR_IMG||''}" alt="Payment QR code"></div>
+<div class="upi">Scan with PhonePe, Google Pay, Paytm or any UPI app</div>
+<label class="fld" for="utr"><span>UTR number</span> (12 digits, in your payment receipt)</label>
+<input type="text" id="utr" inputmode="numeric" maxlength="12" placeholder="123456789012" autocomplete="off">
+<div class="fld"><span>Payment screenshot</span></div>
+<label class="pick" id="pickLbl"><input type="file" id="shot" accept="image/*">Tap to choose a photo</label>
+<img id="prev" alt="Screenshot preview">
+<div class="err" id="err" role="alert"></div>
+<button class="submit" id="send">Submit payment details</button>`;
+$("modal").classList.add("open");
+$("x").onclick = closePay;
+$("utr").oninput = e => { e.target.value = e.target.value.replace(/\D/g,""); };
+$("shot").onchange = e => {
+const f = e.target.files[0];
+if(!f) return;
+const r = new FileReader();
+r.onload = ev => { $("prev").src = ev.target.result; $("prev").style.display = "block"; };
+r.readAsDataURL(f);
+$("pickLbl").lastChild.textContent = f.name;
+};
+$("send").onclick = () => {
+const utr = $("utr").value.trim();
+if(!/^\d{12}$/.test(utr)){ $("err").textContent = "Enter the 12-digit UTR number."; return; }
+if(!$("shot").files[0]){ $("err").textContent = "Choose your payment screenshot."; return; }
+done(c, utr);
+};
+}
+function done(c, utr){
+$("sheet").innerHTML = `
+<div class="done">
+<div class="tick">&#10003;</div>
+<h3 class="display">Details received</h3>
+<p class="sub" style="margin-top:6px">Free Fire ${c.name} card, ${inr(c.price
