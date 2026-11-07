@@ -4,97 +4,79 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rohit fx - Free Fire Cards</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
---bg:#0a1020; --panel:#121c36; --ink:#f1f6ff; --muted:#93a6c8; --line:#223a66;
---cyan:#22d3ff; --gold:#ffcf4a; --neon:#39ff14; --pink:#ff2bd6;
+  --bg:#0a1020; --panel:#121c36; --ink:#f1f6ff; --muted:#93a6c8; --line:#223a66;
+  --cyan:#4fd8ff; --gold:#ffcf4a;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{
-background:
-radial-gradient(700px 420px at 0% 0%,rgba(255,43,214,.16),transparent 60%),
-radial-gradient(700px 480px at 100% 20%,rgba(34,211,255,.14),transparent 60%),
-radial-gradient(800px 500px at 50% 100%,rgba(57,255,20,.07),transparent 65%),
-#030712;
-background-attachment:fixed;
-color:var(--ink);font-family:"Barlow",system-ui,Arial,sans-serif;line-height:1.5;min-height:100vh;position:relative
+  background:
+    radial-gradient(900px 520px at 8% -8%,rgba(99,102,241,.30),transparent 62%),
+    radial-gradient(800px 520px at 100% 4%,rgba(34,211,238,.22),transparent 60%),
+    radial-gradient(900px 600px at 50% 110%,rgba(168,85,247,.16),transparent 65%),
+    linear-gradient(180deg,#0b1226 0%,#080d1c 100%);
+  background-attachment:fixed;
+  color:var(--ink);font-family:"Barlow",system-ui,Arial,sans-serif;line-height:1.5;min-height:100vh;position:relative
 }
 body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
-background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:26px 26px;
--webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%);mask-image:linear-gradient(180deg,#000 0%,transparent 75%)}
-.display{font-family:"Orbitron","Rajdhani",Arial,sans-serif;font-weight:700;letter-spacing:.04em}
+  background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:26px 26px;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%);mask-image:linear-gradient(180deg,#000 0%,transparent 75%)}
+.display{font-family:"Rajdhani","Arial Narrow",Arial,sans-serif;font-weight:700;letter-spacing:.02em}
 .wrap{max-width:1040px;margin:0 auto;padding:0 18px}
-header{border-bottom:1px solid rgba(255,206,84,.5);background:linear-gradient(180deg,rgba(255,196,60,.22),rgba(30,20,4,.62));backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);box-shadow:0 8px 32px rgba(255,190,50,.22),inset 0 1px 0 rgba(255,236,170,.35);position:sticky;top:0;z-index:20;overflow:hidden}
-header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent 0%,#ffd75a 50%,transparent 100%);background-size:35% 100%;background-repeat:no-repeat;animation:gold 3.2s linear infinite}
-@keyframes gold{from{background-position:-40% 0}to{background-position:140% 0}}
-@media (prefers-reduced-motion:reduce){header::after{animation:none}}
-.nav{height:66px;display:flex;align-items:center}
-.logo{font-size:1.6rem;line-height:1;font-weight:900;background:linear-gradient(180deg,#fff2b8,#ffc93c 55%,#d99a0b);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 10px rgba(255,200,60,.45))}
-.logo b{font-weight:900;color:inherit}
+header{border-bottom:1px solid rgba(120,150,220,.18);background:rgba(10,16,32,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);position:sticky;top:0;z-index:20}
+.nav{height:60px;display:flex;align-items:center}
+.logo{font-size:1.7rem;line-height:1}
+.logo b{color:var(--cyan)}
 .logo small{display:block;font-family:"Barlow",sans-serif;font-weight:400;font-size:.72rem;color:var(--muted);letter-spacing:0;margin-top:2px}
-.hero{padding:6px 0 0}
-.banner{display:flex;align-items:center;gap:14px;margin-top:20px;padding:16px;border-radius:26px;border:1px solid rgba(160,90,255,.55);background:linear-gradient(135deg,rgba(20,24,60,.85),rgba(6,10,30,.9));box-shadow:0 0 28px rgba(160,90,255,.22),inset 0 0 24px rgba(34,211,255,.06)}
-.bmark{flex:none;width:62px;height:62px;border-radius:18px;display:grid;place-items:center;font-size:1.4rem;font-weight:900;color:#fff;background:linear-gradient(135deg,#ff2bd6,#8a3dff);box-shadow:0 0 22px rgba(255,43,214,.5)}
-.bname{font-size:1.15rem;color:#fff}
-.bsub{color:var(--cyan);font-size:.82rem;letter-spacing:.06em;font-weight:600;margin-top:2px}
-.bright{margin-left:auto;text-align:right;font-size:.7rem;letter-spacing:.1em;color:var(--muted);line-height:1.5}
-.bright b{display:block;color:#ff9a62;font-size:.78rem;font-family:"Orbitron",sans-serif}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
-.stat{text-align:center;padding:16px 8px;border-radius:22px;border:1px solid rgba(34,211,255,.35);background:rgba(6,14,34,.7);box-shadow:0 0 18px rgba(34,211,255,.08)}
-.stat small{display:block;color:#7fdcff;font-size:.68rem;letter-spacing:.12em}
-.stat b{display:block;margin-top:6px;color:var(--neon);font-size:1.5rem;text-shadow:0 0 14px rgba(57,255,20,.6)}
-.sect{margin-top:22px;color:#8fb2d8;font-size:1rem;letter-spacing:.14em;font-weight:500}
-.item{padding:14px;border-radius:30px;border:1px solid rgba(34,211,255,.4);background:linear-gradient(180deg,rgba(8,18,44,.85),rgba(4,8,22,.9));box-shadow:0 0 26px rgba(34,211,255,.1)}
-.item .gcard{border-radius:22px}
-.meta{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding:0 4px}
-.tag{padding:6px 16px;border-radius:99px;font-size:.8rem;letter-spacing:.08em;color:#fff;background:linear-gradient(90deg,#00c2ff,#1e6bff);box-shadow:0 0 14px rgba(0,194,255,.45)}
-.mt2{color:#8fb2d8;font-size:.78rem;letter-spacing:.1em}
-.getn{margin:12px 4px 0;color:var(--neon);font-size:1.15rem;text-shadow:0 0 14px rgba(57,255,20,.5)}
-.filters{display:flex;gap:10px;overflow-x:auto;padding:22px 2px 6px;scrollbar-width:none}
-.chip{background:rgba(6,14,34,.8);border:1px solid rgba(34,211,255,.3);color:#9fc2e6;font:inherit;font-family:"Orbitron",sans-serif;font-size:.78rem;letter-spacing:.08em;padding:12px 20px;border-radius:99px;cursor:pointer;white-space:nowrap}
-.chip.on{background:linear-gradient(90deg,#22d3ff,#3b82f6);color:#02122e;border-color:transparent;font-weight:700;box-shadow:0 0 20px rgba(34,211,255,.55)}
-.grid{display:grid;gap:22px 20px;padding-top:16px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));padding-bottom:70px}
+.hero{padding:44px 0 10px}
+.hero h1{font-size:clamp(2.8rem,11vw,5.6rem);line-height:.95}
+.hero p{color:var(--muted);max-width:44ch;margin-top:14px}
+.note{display:inline-block;margin-top:16px;border:1px solid var(--gold);color:var(--gold);border-radius:99px;padding:5px 14px;font-weight:600;font-size:.9rem}
+.filters{display:flex;gap:8px;overflow-x:auto;padding:18px 0 16px;scrollbar-width:none}
+.chip{background:rgba(18,28,54,.8);border:1px solid var(--line);color:var(--muted);font:inherit;padding:8px 15px;border-radius:99px;cursor:pointer;white-space:nowrap}
+.chip.on{background:var(--cyan);color:#04233a;border-color:var(--cyan);font-weight:600}
+.grid{display:grid;gap:26px 20px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));padding-bottom:70px}
 .gcard{
---a:#888;--b:#222;--edge:#fff;
-aspect-ratio:1.586/1;border-radius:20px;position:relative;overflow:hidden;padding:18px 20px;
-display:flex;flex-direction:column;justify-content:space-between;color:#fff;
-background:
-radial-gradient(120% 90% at 100% 0%,color-mix(in srgb,var(--a) 70%,#fff 10%) 0%,transparent 55%),
-linear-gradient(140deg,var(--a) 0%,var(--b) 78%);
-box-shadow:0 0 0 1px color-mix(in srgb,var(--edge) 45%,transparent) inset,0 18px 40px -14px var(--a);
-transition:transform .25s;
+  --a:#888;--b:#222;--edge:#fff;
+  aspect-ratio:1.586/1;border-radius:20px;position:relative;overflow:hidden;padding:18px 20px;
+  display:flex;flex-direction:column;justify-content:space-between;color:#fff;
+  background:
+    radial-gradient(120% 90% at 100% 0%,color-mix(in srgb,var(--a) 70%,#fff 10%) 0%,transparent 55%),
+    linear-gradient(140deg,var(--a) 0%,var(--b) 78%);
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--edge) 45%,transparent) inset,0 18px 40px -14px var(--a);
+  transition:transform .25s;
 }
 .gcard:hover{transform:translateY(-4px)}
 .gcard svg.pat{position:absolute;inset:0;width:100%;height:100%;opacity:.16;pointer-events:none}
 .gcard .shine{position:absolute;inset:0;background:linear-gradient(112deg,transparent 30%,rgba(255,255,255,.22) 46%,transparent 58%);pointer-events:none}
 .gcard .row{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:1}
-.brand{font-size:.92rem}
+.brand{font-size:1.05rem}
 .brand small{display:block;font-family:"Barlow",sans-serif;font-weight:500;font-size:.68rem;letter-spacing:.14em;opacity:.8}
 .chipic{width:38px;height:28px;border-radius:6px;border:1px solid rgba(255,255,255,.5);background:linear-gradient(135deg,rgba(255,255,255,.5),rgba(255,255,255,.12));position:relative}
 .chipic::before,.chipic::after{content:"";position:absolute;background:rgba(255,255,255,.45)}
 .chipic::before{left:0;right:0;top:50%;height:1px}
 .chipic::after{top:0;bottom:0;left:38%;width:1px}
-.emblem{position:absolute;right:20px;top:52%;transform:translateY(-55%);width:76px;height:76px;filter:drop-shadow(0 0 16px rgba(255,255,255,.45))}
+.emblem{position:absolute;right:20px;top:50%;transform:translateY(-52%);width:84px;height:84px;filter:drop-shadow(0 0 16px rgba(255,255,255,.45))}
 .gcard .low{display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:1}
-.gname{font-size:1.3rem;line-height:1}
-.gtier{font-size:.66rem;letter-spacing:.12em;opacity:.85;margin-top:4px}
-.gval{font-size:1.15rem;line-height:1;text-align:right}
+.gname{font-size:1.9rem;line-height:1}
+.gtier{font-size:.78rem;letter-spacing:.12em;opacity:.85;margin-top:4px}
+.gval{font-size:1.5rem;line-height:1;text-align:right}
 .gval small{display:block;font-family:"Barlow",sans-serif;font-weight:500;font-size:.66rem;letter-spacing:.14em;opacity:.8;margin-bottom:3px}
-.offer{position:absolute;left:20px;top:50%;transform:translateY(-50%);z-index:1;line-height:1}
-.offer b{display:flex;align-items:center;gap:6px;font-size:1.4rem}
-.offer b svg{width:20px;height:20px;flex:none;filter:drop-shadow(0 0 8px rgba(255,255,255,.6))}
-.offer span{display:block;font-size:.58rem;letter-spacing:.18em;margin-top:2px;opacity:.95}
-.pan{position:absolute;left:20px;top:58px;z-index:1;font-size:.66rem;letter-spacing:.14em;opacity:.9;white-space:nowrap}
-.getline{text-align:center;color:var(--neon);text-shadow:0 0 12px rgba(57,255,20,.5);font-family:"Orbitron",sans-serif;font-size:.95rem;margin-top:4px;font-weight:600;margin-top:-2px}
-.buy{margin-top:14px;width:100%;background:linear-gradient(90deg,#00d4ff,#1e90ff);color:#02122e;border:0;font-family:"Orbitron",sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.08em;padding:16px;border-radius:20px;cursor:pointer;box-shadow:0 0 26px rgba(0,212,255,.5)}
+.offer{position:absolute;left:20px;top:47%;transform:translateY(-50%);z-index:1;line-height:1}
+.offer b{display:flex;align-items:center;gap:7px;font-size:2.1rem}
+.offer b svg{width:24px;height:24px;flex:none;filter:drop-shadow(0 0 8px rgba(255,255,255,.6))}
+.offer span{display:block;font-size:.72rem;letter-spacing:.2em;margin-top:3px;opacity:.95}
+.getline{text-align:center;color:var(--cyan);font-weight:600;margin-top:-2px}
+.buy{margin-top:12px;width:100%;background:var(--cyan);color:#04233a;border:0;font:inherit;font-weight:600;font-size:1rem;padding:12px;border-radius:12px;cursor:pointer;transition:filter .15s}
 .modal{position:fixed;inset:0;display:none;place-items:center;background:rgba(2,6,14,.78);z-index:50;padding:16px}
 .modal.open{display:grid}
-.sheet{background:#060d22;box-shadow:0 0 40px rgba(34,211,255,.25);border:1px solid rgba(34,211,255,.45);border-radius:20px;padding:22px;width:100%;max-width:400px;max-height:94vh;overflow-y:auto;position:relative}
-.sheet h3{font-size:1.15rem;line-height:1.3;padding-right:24px}
+.sheet{background:#121c36;box-shadow:0 30px 80px -20px rgba(0,0,0,.7);border:1px solid var(--line);border-radius:20px;padding:22px;width:100%;max-width:400px;max-height:94vh;overflow-y:auto;position:relative}
+.sheet h3{font-size:1.6rem;line-height:1.1}
 .sub{color:var(--muted);font-size:.9rem;margin-top:2px}
 .close{position:absolute;top:12px;right:14px;background:none;border:0;color:var(--ink);font-size:1.7rem;line-height:1;cursor:pointer}
-.amt{font-size:1.9rem;text-align:center;margin-top:10px;color:var(--gold)}
+.amt{font-size:2.3rem;text-align:center;margin-top:10px;color:var(--gold)}
 .qrbox{background:#fff;border-radius:16px;width:250px;margin:10px auto 8px;padding:6px;line-height:0}
 .qrbox img{width:100%;height:auto;display:block}
 .upi{text-align:center;font-size:.9rem;color:var(--muted)}
@@ -105,165 +87,146 @@ input[type=text]{width:100%;font:inherit;padding:12px;border-radius:10px;border:
 .pick input{display:none}
 #prev{display:none;width:100%;max-height:180px;object-fit:contain;margin-top:10px;border-radius:10px;border:1px solid var(--line);background:#000}
 .err{color:#ff9a9a;font-size:.86rem;margin-top:10px;min-height:1.2em}
-.submit{width:100%;margin-top:6px;background:linear-gradient(90deg,#00d4ff,#1e90ff);color:#02122e;border:0;font-family:"Orbitron",sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.06em;padding:15px;border-radius:16px;cursor:pointer;box-shadow:0 0 22px rgba(0,212,255,.45)}
+.submit{width:100%;margin-top:6px;background:var(--gold);color:#2b1d00;border:0;font:inherit;font-weight:600;font-size:1rem;padding:13px;border-radius:12px;cursor:pointer}
 .done{text-align:center;padding:12px 0 4px}
 .tick{width:60px;height:60px;border-radius:50%;background:var(--cyan);color:#04233a;display:grid;place-items:center;font-size:2rem;font-weight:700;margin:0 auto 12px}
+.done .submit{background:var(--cyan);color:#04233a}
 footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:.85rem}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
-.steps div{background:rgba(6,14,34,.7);border:1px solid rgba(34,211,255,.22);border-radius:16px;padding:10px 12px;color:var(--muted);font-size:.78rem;line-height:1.3}
-.steps b{display:block;color:var(--cyan);font-weight:600;font-size:.82rem;font-family:"Orbitron",sans-serif}
-.chiprow{display:flex;justify-content:center;margin-top:20px}
-.gchip{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:99px;font-size:.78rem;letter-spacing:.14em;color:#2a1a00;background:linear-gradient(180deg,#fff0a8,#ffc93c 55%,#e0a010);border:1px solid #ffe28a;box-shadow:0 0 22px rgba(255,200,60,.55),inset 0 1px 0 rgba(255,255,255,.7)}
-.gchip::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-50%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);animation:chipshine 3s ease-in-out infinite}
-@keyframes chipshine{0%{left:-50%}60%,100%{left:130%}}
-.hl{text-align:center;margin-top:14px;font-size:1.02rem;line-height:1.9;color:#dbe7ff}
-mark{color:#1a1200;font-weight:700;padding:1px 7px;border-radius:5px;background:linear-gradient(transparent 12%,#ffd54a 12%,#ffe27a 88%,transparent 88%);box-shadow:0 0 14px rgba(255,213,74,.5);transform:rotate(-1.2deg);display:inline-block}
-#prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;background:linear-gradient(90deg,#ff2bd6,#22d3ff,#39ff14,#ffd75a,#ff7a2b);box-shadow:0 0 12px rgba(34,211,255,.8)}
-@property --ang{syntax:"<angle>";initial-value:0deg;inherits:false}
-.item{position:relative;transition:box-shadow .5s}
-.item::before{content:"";position:absolute;inset:-2px;border-radius:32px;padding:2px;pointer-events:none;opacity:0;transition:opacity .5s;
-background:conic-gradient(from var(--ang),#ff2bd6,#22d3ff,#39ff14,#ffd75a,#ff7a2b,#ff2bd6);
--webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 3.5s linear infinite}
-@keyframes spin{to{--ang:360deg}}
-.item.lit::before{opacity:1}
-.item.lit{box-shadow:0 0 34px rgba(255,43,214,.28),0 0 54px rgba(34,211,255,.22)}
-.item.flash{box-shadow:0 0 50px rgba(255,213,74,.5),0 0 80px rgba(255,43,214,.4)}
-.ripple{position:absolute;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;pointer-events:none;z-index:3;
-background:radial-gradient(circle,rgba(255,255,255,.95),rgba(255,213,74,.7) 25%,rgba(255,43,214,.5) 50%,rgba(34,211,255,.35) 70%,transparent 75%);animation:rip .8s ease-out forwards}
-@keyframes rip{to{transform:scale(22);opacity:0}}
-@media (prefers-reduced-motion:reduce){.gchip::after,.item::before,.ripple{animation:none}}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:26px}
+.steps div{background:rgba(18,28,54,.7);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--muted);font-size:.9rem;line-height:1.35}
+.steps b{display:block;color:var(--ink);font-weight:600;font-size:1rem}
 </style>
 </head>
 <body>
 <header>
-<div class="wrap nav">
-<div class="logo display">ROHIT <b>FX</b></div>
-</div>
+  <div class="wrap nav">
+    <div class="logo display">Rohit <b>fx</b><small>Owner: Rohit fx</small></div>
+  </div>
 </header>
-<div id="prog"></div>
 <main class="wrap">
-<div class="chiprow"><span class="gchip display">&#9733; FREE FIRE DIAMOND PACKS &#9733;</span></div>
-<p class="hl">Pick a pack, pay with <mark>UPI QR</mark>, then send your <mark>UTR number</mark> and screenshot.</p>
-<section class="hero">
-<div class="banner">
-<div class="bmark display">RF</div>
-<div><div class="bname display">ROHIT FX</div><div class="bsub">FREE FIRE DIAMOND STORE</div></div>
-<div class="bright"><b>UPI QR</b>PAYMENT</div>
-</div>
-<div class="stats">
-<div class="stat"><small>TOTAL PACKS</small><b class="display">20</b></div>
-<div class="stat"><small>PRICE RANGE</small><b class="display">₹500+</b></div>
-</div>
-</section>
-<div class="steps"><div><b>1. CHOOSE</b>Pick a pack</div><div><b>2. PAY</b>Scan the QR</div><div><b>3. SEND</b>UTR and photo</div></div>
-<div class="sect display">ACTIVE PACKS</div>
-<div class="filters" id="filters" aria-label="Filter by price"></div>
-<div class="grid" id="grid"></div>
+  <section class="hero">
+    <h1 class="display">Pick your<br>tier. Own the<br>game.</h1>
+    <p>Free Fire cards from Bronze to Black. Buy a card, pay by QR, and send your UTR number with a payment screenshot.</p>
+    <span class="note">Cards from ₹500 to ₹10,000</span>
+  </section>
+  <div class="steps"><div><b>1. Choose</b>Pick a card</div><div><b>2. Pay</b>Scan the QR</div><div><b>3. Send</b>UTR number and photo</div></div>
+  <div class="filters" id="filters" aria-label="Filter by price"></div>
+  <div class="grid" id="grid"></div>
 </main>
 <footer><div class="wrap">Rohit fx. Sample store, prototype only. Card art is made up for this demo and is not official Free Fire artwork.</div></footer>
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
-<div class="sheet" id="sheet"></div>
+  <div class="sheet" id="sheet"></div>
 </div>
 <script>
-window.addEventListener("error",function(e){var g=document.getElementById("grid");if(g&&!g.children.length)g.innerHTML='<p style="color:#ff9a9a;padding:16px;font-size:14px">Script error: '+e.message+'</p>';});
-</script>
-<script>
+const QR_IMG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAAFM0lEQVR42u2bQa7bNhCGPz4StXfDZXZ+6AlyglI3yBGagxR9dtFzFLlCbkABPUCO4Ad00U0ACt3YwajTBaXnAJHzFCBpG+ZpZQhjmhpx/vnnn7EzVl79DauvJ9Mn06/MtHfOuUigH51zzoXBhaFzzgX6h5ttO8vMlF5J3jIA6Rx7lXyOnF2HmFlu2wOjc5Dqq0fyGNkUNvd3m4IvQO9iw1EQLh/FxoCGO//2xbgztysulvA2tY4DFw+MsQR5HeAcgN6GzoZOyeM3AJreDHpfeh3uVA6I6XAHjBEXgWSlcQ845wKcI8ihkh/kMO4OyEHpGZxzXbsewKYr+wJiSlIxBV+wkhB7MGjaAxmSSlbJ3i402ZekoCQrqWkPZAUrCZKZWcFKUjFvZmb1PDTtgQkJxwhyGGPvdhbAl14HBz2DQ6xpPoCZAVZQEmL+/fdekrdc7zQfBUoyy1aSkryZL8kKKllBJUPDURCAIK99iU7KGCsXisbBkYIQSEGw4UXbUeBLAuqZN8tmGakZIdUPzUeBN/MTH6gRAWKQkGxmOps1fAZUjFoav5f7rOAtq5gVfGnbAxXoTCVXGITERIQmXuT/x3wg57WmO374GA5IVqhZwJvZseYCq4+v13JBAJ6t28Cz0cXv1pm+/JXhsP9oJT9fdzfwar9q1XfAn9dYcUlWMMsqWcWOgFNfLmzhKhK+AuyXVRvY15JrhWktx9/sV5hWjDp1K0xP9Qu3V3Fg4kLZ/joC4CoCINkKLHsgVFNb8VjbzGY/++GRve559hLIj5sa3MbFNZai4LgF7q/kgjzRv4IpiAIyn3+VfAUHdPLsadUG3t2sC+4TmHt4v4/iwH6/atUC5A7+Xoyt0QGoS2OsmtjxclbkEOi85KVVj0CJS4dgca+n7Xok3BzXmGZ2diIuHK0r+LqF7ZKpSjbLQTKSLwabDFMeHK9VRuULAPyeYe9suxAGXyzDJH/fjRG7/xBQ+jFSqfLCqtv/OhuePteqPZJ9we0OOrznhHOH1EqZf1UnfDjR3TocuFrufMgc7CMbcK5TCJIvfj31DB1D51x3RR/oKhSsDMOy3lmnlaa3E166smbVCneLq4bhzhc2Begvzjum8+6AGJLr2fhg1Xj15264EjHhE47L4zgwr7ZdiYRX08YY+3GXGTqF8fs5Ccz0RWuRuLCqA/gNblckoz3wBwu89MNsOJ3+nx43nfiNW5OO6+u6KcuMqMojllVM5TSlI8m+8CAaL3LC+g62xxUbqHfiCpqD2wP8uIY8vekAfl4VW88Br1fqAstI9uVSHiJFxWYPJK6xYg88f7MuuAs+r8QByboaX9NnUckkz9pI9cakGCOG1Nq59eq4wh1pqgXAW661UnVL8x6wkswmkcRbVslIriKJSpWPWu+YSJ41okklgOTNbFYGlNS6SpZ9SfWpp0qwJBVDMpIRq4VDyx4AlalzWgGwds38lB+N1j1gZt5MZ288dBJtjgsaV8vNm9W+uS+pto91okOJWTxs2wN1SqSyAiRXgXTWxyo9aLt33CN5jMkXxpiswODGSBUNfIHBfZWP9Yk48JDymGZIkjIdg5kw5PZnSiVXlQB66IPk2jib56manynFl17FAn2YGqZ9Fcd8qQ30lucJx4DC2aXfFa99NzgEwN9HDQA6dLn9Iey0Kb3COeItQ6+zNuLN6pRd4zMkYnVUoOqiVpIvl5ZZ8/MDtXFmZaoL6vPWoqDqBk1P0VxmSscIQxdgc9+N7s4KCueYAmm5X9CIB9zT/4yeTL95038AwdXJyodK6b0AAAAASUVORK5CYII=";
 const NAMES = ["Bronze","Copper","Silver","Steel","Gold","Amber","Platinum","Pearl","Jade","Ruby","Garnet","Sapphire","Topaz","Emerald","Opal","Diamond","Onyx","Obsidian","Cosmic","Black"];
 const DIA   = [25,60,75,90,115,140,165,195,225,255,285,320,350,385,420,455,490,525,560,600];
 const TIERS = ["STARTER","BASIC","STANDARD","ADVANCED","ELITE","MASTER","TOP TIER"];
 const CARDS = NAMES.map((name,i)=>{
-const h = (i*47+20)%360;
-return {id:i+1,name,dia:DIA[i]+"K",tier:TIERS[Math.min(6,Math.floor(i/3))],price:(i+1)*500,
-a:`hsl(${h} 70% 45%)`,b:`hsl(${h} 75% 10%)`,edge:`hsl(${h} 90% 80%)`};
+  const h = (i*47+20)%360;
+  return {id:i+1,name,dia:DIA[i]+"K",tier:TIERS[Math.min(6,Math.floor(i/3))],price:(i+1)*500,
+    a:`hsl(${h} 70% 45%)`,b:`hsl(${h} 75% 10%)`,edge:`hsl(${h} 90% 80%)`};
 });
 const RANGES = [
-{label:"All",              test:p=>true},
-{label:"Up to ₹2,000",     test:p=>p<=2000},
-{label:"₹2,500 to ₹5,000", test:p=>p>=2500&&p<=5000},
-{label:"₹5,500 to ₹10,000",test:p=>p>=5500}
+  {label:"All",              test:p=>true},
+  {label:"Up to ₹2,000",     test:p=>p<=2000},
+  {label:"₹2,500 to ₹5,000", test:p=>p>=2500&&p<=5000},
+  {label:"₹5,500 to ₹10,000",test:p=>p>=5500}
 ];
 let filter = "All";
 const $ = id => document.getElementById(id);
 const inr = n => "₹" + n.toLocaleString("en-IN");
 function emblem(n){
-let bars = "";
-for(let i=0;i<Math.min(n,4);i++){ bars += `<path d="M30 ${44-i*8}l20 -9 20 9" />`; }
-return `<svg class="emblem" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-<path d="M50 6l38 22v44L50 94 12 72V28z" fill="rgba(255,255,255,.12)"/>
-<path d="M50 18l27 16v32L50 82 23 66V34z" stroke-width="2" opacity=".7"/>
-${n<=4?bars:`<path d="M50 32l7 14 15 2-11 10 3 15-14-8-14 8 3-15-11-10 15-2z" fill="rgba(255,255,255,.35)"/>`}
-</svg>`;
+  let bars = "";
+  for(let i=0;i<Math.min(n,4);i++){ bars += `<path d="M30 ${44-i*8}l20 -9 20 9" />`; }
+  return `<svg class="emblem" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M50 6l38 22v44L50 94 12 72V28z" fill="rgba(255,255,255,.12)"/>
+    <path d="M50 18l27 16v32L50 82 23 66V34z" stroke-width="2" opacity=".7"/>
+    ${n<=4?bars:`<path d="M50 32l7 14 15 2-11 10 3 15-14-8-14 8 3-15-11-10 15-2z" fill="rgba(255,255,255,.35)"/>`}
+  </svg>`;
 }
 function pattern(id){
-return `<svg class="pat" viewBox="0 0 160 100" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#fff" stroke-width="1" aria-hidden="true">
-<defs><pattern id="p${id}" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><path d="M0 10h20M10 0v20"/></pattern></defs>
-<rect width="160" height="100" fill="url(#p${id})" stroke="none"/>
-<circle cx="140" cy="80" r="46"/><circle cx="140" cy="80" r="30"/>
-</svg>`;
+  return `<svg class="pat" viewBox="0 0 160 100" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#fff" stroke-width="1" aria-hidden="true">
+    <defs><pattern id="p${id}" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><path d="M0 10h20M10 0v20"/></pattern></defs>
+    <rect width="160" height="100" fill="url(#p${id})" stroke="none"/>
+    <circle cx="140" cy="80" r="46"/><circle cx="140" cy="80" r="30"/>
+  </svg>`;
 }
 function art(c){
-return `<div class="gcard" style="--a:${c.a};--b:${c.b};--edge:${c.edge}">
-${pattern(c.id)}<div class="shine"></div>
-<div class="row"><div class="brand display">Free Fire<small>GAME CARD</small></div><div class="chipic"></div></div>
-<div class="pan display">**** **** **** ****</div>
-${emblem(Math.ceil(c.id/5))}
-<div class="offer"><b class="display"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9z" opacity=".95"/></svg>${c.dia}</b><span class="display">DIAMONDS</span></div>
-<div class="low">
-<div><div class="gname display">${c.name}</div><div class="gtier">${c.tier}</div></div>
-<div class="gval display"><small>VALUE</small>${inr(c.price)}</div>
-</div>
-</div>`;
+  return `<div class="gcard" style="--a:${c.a};--b:${c.b};--edge:${c.edge}">
+    ${pattern(c.id)}<div class="shine"></div>
+    <div class="row"><div class="brand display">Free Fire<small>GAME CARD</small></div><div class="chipic"></div></div>
+    ${emblem(Math.ceil(c.id/5))}
+    <div class="offer"><b class="display"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9z" opacity=".95"/></svg>${c.dia}</b><span class="display">DIAMONDS</span></div>
+    <div class="low">
+      <div><div class="gname display">${c.name}</div><div class="gtier">${c.tier}</div></div>
+      <div class="gval display"><small>VALUE</small>${inr(c.price)}</div>
+    </div>
+  </div>`;
 }
 function renderFilters(){
-$("filters").innerHTML = RANGES.map(r=>`<button class="chip ${r.label===filter?"on":""}" data-f="${r.label}">${r.label}</button>`).join("");
+  $("filters").innerHTML = RANGES.map(r=>`<button class="chip ${r.label===filter?"on":""}" data-f="${r.label}">${r.label}</button>`).join("");
 }
 function renderGrid(){
-const rg = RANGES.find(r=>r.label===filter);
-$("grid").innerHTML = CARDS.filter(c=>rg.test(c.price)).map(c=>`
-<div class="item">${art(c)}
-<div class="meta"><span class="tag display">${c.name.toUpperCase()}</span><span class="mt2 display">${c.tier}</span></div>
-<div class="getn display">GET ${c.dia} DIAMONDS</div>
-<button class="buy" data-buy="${c.id}">BUY NOW | ${inr(c.price)}</button></div>`).join("");
-watchCards();
+  const rg = RANGES.find(r=>r.label===filter);
+  $("grid").innerHTML = CARDS.filter(c=>rg.test(c.price)).map(c=>`
+    <div>${art(c)}<button class="buy" data-buy="${c.id}">Buy now ${inr(c.price)}</button></div>`).join("");
 }
 function openPay(id){
-const c = CARDS.find(x=>x.id==id);
-$("sheet").innerHTML = `
-<button class="close" id="x" aria-label="Close">&times;</button>
-<h3 class="display" id="mt">Pay for Free Fire ${c.name}</h3>
-<div class="sub">Scan the QR and pay exactly this amount</div>
-<div class="amt display">${inr(c.price)}</div>
-<div class="getline">You get ${c.dia} Diamonds</div>
-<div class="qrbox"><img src="${window.QR_IMG||''}" alt="Payment QR code"></div>
-<div class="upi">Scan with PhonePe, Google Pay, Paytm or any UPI app</div>
-<label class="fld" for="utr"><span>UTR number</span> (12 digits, in your payment receipt)</label>
-<input type="text" id="utr" inputmode="numeric" maxlength="12" placeholder="123456789012" autocomplete="off">
-<div class="fld"><span>Payment screenshot</span></div>
-<label class="pick" id="pickLbl"><input type="file" id="shot" accept="image/*">Tap to choose a photo</label>
-<img id="prev" alt="Screenshot preview">
-<div class="err" id="err" role="alert"></div>
-<button class="submit" id="send">Submit payment details</button>`;
-$("modal").classList.add("open");
-$("x").onclick = closePay;
-$("utr").oninput = e => { e.target.value = e.target.value.replace(/\D/g,""); };
-$("shot").onchange = e => {
-const f = e.target.files[0];
-if(!f) return;
-const r = new FileReader();
-r.onload = ev => { $("prev").src = ev.target.result; $("prev").style.display = "block"; };
-r.readAsDataURL(f);
-$("pickLbl").lastChild.textContent = f.name;
-};
-$("send").onclick = () => {
-const utr = $("utr").value.trim();
-if(!/^\d{12}$/.test(utr)){ $("err").textContent = "Enter the 12-digit UTR number."; return; }
-if(!$("shot").files[0]){ $("err").textContent = "Choose your payment screenshot."; return; }
-done(c, utr);
-};
+  const c = CARDS.find(x=>x.id==id);
+  $("sheet").innerHTML = `
+    <button class="close" id="x" aria-label="Close">&times;</button>
+    <h3 class="display" id="mt">Pay for Free Fire ${c.name}</h3>
+    <div class="sub">Scan the QR and pay exactly this amount</div>
+    <div class="amt display">${inr(c.price)}</div>
+    <div class="getline">You get ${c.dia} Diamonds</div>
+    <div class="qrbox"><img src="${QR_IMG}" alt="Payment QR code"></div>
+    <div class="upi">Scan with PhonePe, Google Pay, Paytm or any UPI app</div>
+    <label class="fld" for="utr"><span>UTR number</span> (12 digits, in your payment receipt)</label>
+    <input type="text" id="utr" inputmode="numeric" maxlength="12" placeholder="123456789012" autocomplete="off">
+    <div class="fld"><span>Payment screenshot</span></div>
+    <label class="pick" id="pickLbl"><input type="file" id="shot" accept="image/*">Tap to choose a photo</label>
+    <img id="prev" alt="Screenshot preview">
+    <div class="err" id="err" role="alert"></div>
+    <button class="submit" id="send">Submit payment details</button>`;
+  $("modal").classList.add("open");
+  $("x").onclick = closePay;
+  $("utr").oninput = e => { e.target.value = e.target.value.replace(/\D/g,""); };
+  $("shot").onchange = e => {
+    const f = e.target.files[0];
+    if(!f) return;
+    const r = new FileReader();
+    r.onload = ev => { $("prev").src = ev.target.result; $("prev").style.display = "block"; };
+    r.readAsDataURL(f);
+    $("pickLbl").lastChild.textContent = f.name;
+  };
+  $("send").onclick = () => {
+    const utr = $("utr").value.trim();
+    if(!/^\d{12}$/.test(utr)){ $("err").textContent = "Enter the 12-digit UTR number."; return; }
+    if(!$("shot").files[0]){ $("err").textContent = "Choose your payment screenshot."; return; }
+    done(c, utr);
+  };
 }
 function done(c, utr){
-$("sheet").innerHTML = `
-<div class="done">
-<div class="tick">&#10003;</div>
-<h3 class="display">Details received</h3>
-<p class="sub" style="margin-top:6px">Free Fire ${c.name} card, ${inr(c.price
+  $("sheet").innerHTML = `
+    <div class="done">
+      <div class="tick">&#10003;</div>
+      <h3 class="display">Details received</h3>
+      <p class="sub" style="margin-top:6px">Free Fire ${c.name} card, ${inr(c.price)}<br>UTR ${utr}</p>
+      <button class="submit" id="ok" style="margin-top:18px">Done</button>
+    </div>`;
+  $("ok").onclick = closePay;
+}
+function closePay(){ $("modal").classList.remove("open"); }
+$("modal").addEventListener("click",e=>{ if(e.target.id==="modal") closePay(); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closePay(); });
+document.addEventListener("click",e=>{
+  const t = e.target;
+  if(t.dataset.f){ filter=t.dataset.f; renderFilters(); renderGrid(); }
+  if(t.dataset.buy){ openPay(t.dataset.buy); }
+});
+renderFilters();
+renderGrid();
+</script>
+</body>
+</html>
